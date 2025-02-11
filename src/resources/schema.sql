@@ -9,8 +9,8 @@ CREATE TABLE cliente (
     nome_empresa varchar(50) NOT NULL
 );
 
-INSERT INTO usuario (nome, contato, email, senha, banco_horas, tipo_acesso)
-VALUES ('João Silva', '11987654321', 'joao.silva@email.com', 'senhaForte123', 50, 'admin');
+-- INSERT INTO usuario (nome, contato, email, senha, banco_horas, tipo_acesso)
+-- VALUES ('João Silva', '11987654321', 'joao.silva@email.com', 'senhaForte123', 50, 'admin');
 
 
 CREATE TABLE usuario (
