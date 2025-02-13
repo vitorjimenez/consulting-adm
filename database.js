@@ -28,7 +28,9 @@ async function getUsuario(id){
     }
 }
 
-
+async function postUsuario(){
+    
+}
 
 const usuario = await getUsuario(1);
 console.log(usuario);
