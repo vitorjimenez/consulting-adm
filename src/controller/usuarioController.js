@@ -1,5 +1,4 @@
-const { status } = require('express/lib/response');
-const database = require('../database/connection');
+import database from '../database/connection.js';
 
 class UsuarioController {
     adicionarUsuario(req, res){
@@ -19,13 +18,13 @@ class UsuarioController {
         .table('usuario')
         .then(data => {
             console.log(data);
-            res.json(status = 200, {message: 'Usuário adicionado com sucesso'});
+            res.status(200).json({message: 'Usuário adicionado com sucesso'});
         }).catch(err => {
-            console.log('Houve um problema ao tentar adicionar usuário' + err);
-            res.json(status = '500')
+            console.log('Houve um problema ao tentar adicionar usuário >>' + err);
+            res.status(500).json({message: 'Houve um problema ao adicionar usuário.'});
         });
     }
 
 }
 
-module.exports = new UsuarioController();
+export default new UsuarioController();

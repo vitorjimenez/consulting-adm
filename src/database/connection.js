@@ -1,6 +1,9 @@
-require('dotenv').config;
+import dotenv from 'dotenv';
+dotenv.config();
 
-const knex = require('knex')({
+import knex from 'knex';
+
+const database = knex({
     client: 'mysql2',
     connection: {
         port: '3307',
@@ -11,5 +14,4 @@ const knex = require('knex')({
     }
 });
 
-module.exports = connection;
-
+export default database;
