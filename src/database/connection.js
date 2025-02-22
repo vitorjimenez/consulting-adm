@@ -6,7 +6,7 @@ import knex from 'knex';
 const database = knex({
     client: 'mysql2',
     connection: {
-        port: '3307',
+        port: '3306',
         host: process.env.mysql_host,
         user: process.env.mysql_user,
         password: process.env.mysql_password,
