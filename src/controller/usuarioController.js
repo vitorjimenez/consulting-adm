@@ -1,6 +1,7 @@
 import database from '../database/connection.js';
 
 class UsuarioController {
+
     adicionarUsuario(req, res) {
         console.log(req.body);
 
@@ -93,7 +94,7 @@ class UsuarioController {
                 res.json({ message: 'Erro ao consultar usuários' });
             });
     }
-    
+
 }
 
 export default new UsuarioController();
